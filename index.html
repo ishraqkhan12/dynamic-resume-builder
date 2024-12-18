@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div id="form" >
+
+        <h1 class="h1"> Dynamic Resume Builder</h1>
+        <div class="body">
+            <div class="container-F">
+                <div class="third-cont">
+
+
+                    <!---------------------------- Professional Info  ------------------------------>
+
+                    <fieldset class="Personal-info">
+                        <legend>
+                            <h3> Personal Information</h3>
+                        </legend>
+
+                        <!-- <h1 id="heading">ii</h1> -->
+                        <label for="email address"> <strong>Name:</strong></label> <br>
+                        <input id="name-F" type="text" name="email address" value=""
+                            placeholder="Enter Your Name" required ><br><br>
+
+                       <label>Photo:</label>
+                       <input type="file" id="photoInput">
+
+                       
+
+
+                    </fieldset><br>
+
+                    <!---------------------------- Professional Info  ------------------------------>
+
+                    <fieldset class="Personal-info">
+                        <legend>
+                            <h3> Professional Information</h3>
+                        </legend>
+
+                        <label for="text"> <strong>Profession/Title:</strong></label> <br>
+                        <input id="title-F" type="text" name="text" placeholder="Enter Your Profession">
+                        <br><br>
+
+                        <label for="comment"><strong>Summary:</strong></label><br>
+                        <textarea name="comment" id="summaryForm" cols="25" rows="5"
+                            placeholder="Enter your professional summary about your skills here..."></textarea><br>
+                        <br>
+
+                        <label for="would you visit again">You can choose projects or Experience</label><br>
+                        <input id="project-F" type="radio" name="option" style="width:15px;">Projects
+                        <input id="experience-F" type="radio" name="option" style="width:15px;">Experience
+                        <br><br>
+
+                        <div class="main-E">
+                            <div>
+
+                                <label for="text" id="h1"> <strong>Projects/Experience:</strong></label> <br>
+                                <input id="projectName-F" type="text" name="password"
+                                    placeholder="Enter Your Project/Experience name"><br><br>
+                                <textarea id="projectDet-F" name="comment" id="comment" cols="25" rows="5"
+                                    placeholder="Enter your Project/Experience detail..."></textarea><br>
+                            </div>
+                            <div>
+                                <label for="text"> <strong>Projects/Experience:</strong></label> <br>
+                                <input id="projectName2-F" type="text" name="password"
+                                    placeholder="Enter Your Project/Experience name"><br><br>
+                                <textarea id="projectDet2-F" name="comment" id="comment" cols="25" rows="5"
+                                    placeholder="Enter your Project/Experience detail..."></textarea><br>
+
+
+                            </div>
+                        </div><br>
+
+                        <label for="text"> <strong>Skills:</strong></label> <br>
+                        <input id="skill1-F" type="email" name="email address"
+                            placeholder="Enter Your 1st Skill"><br><br>
+                            <button id="new">Add</button>
+                        <!-- <input id="skill2-F" type="email" name="email address"
+                            placeholder="Enter Your 2nd skill"><br><br>
+                        <input id="skill3-F" type="email" name="email address"
+                            placeholder="Enter Your 3rd Skill"><br><br> -->
+
+
+
+
+
+
+                        <!-- <br> -->
+                    </fieldset><br>
+
+                    <!---------------------------- Education  ------------------------------>
+
+
+                    <fieldset class="Personal-info">
+                        <legend>
+                            <h3> Education</h3>
+                        </legend>
+
+                        <div class="main-E">
+
+                            <div>
+
+                                <label for="text"> <strong>Degree:</strong></label> <br>
+                                <input id="degree-F" type="text" name="text" placeholder="Enter Your Last Degree">
+                                <br><br>
+
+                                <label for="text"> <strong>Institute</strong></label> <br>
+                                <input id="institute-F" type="text" name="text" placeholder="Enter Your Institute">
+                                <br><br>
+                            </div>
+                            <div>
+                                <label for="text"> <strong>Degree:</strong></label> <br>
+                                <input id="degree2-F" type="text" name="text" placeholder="Enter Your Last Degree">
+                                <br><br>
+
+                                <label for="text"> <strong>Institute</strong></label> <br>
+                                <input id="institute2-F" type="text" name="text" placeholder="Enter Your Institute">
+                                <br><br>
+
+                            </div>
+
+                        </div>
+
+
+                    </fieldset><br>
+                    <!---------------------------- Contact Info  ------------------------------>
+
+
+                    <fieldset class="Personal-info">
+                        <legend>
+                            <h3> Contact </h3>
+                        </legend>
+
+                        <label for="text"> <strong>Phone:</strong></label> <br>
+                        <input id="phone-F" type="number" name="number" placeholder="Enter Your Contact Number">
+                        <br><br>
+
+                        <label for="email"> <strong>Email:</strong></label> <br>
+                        <input id="email-F" type="email" name="email" placeholder="Enter Your Email">
+                        <br><br>
+
+                        <label for="text"> <strong>Github:</strong></label> <br>
+                        <input id="github-F" type="text" name="text" placeholder="Enter Your Github ID">
+                        <br><br>
+
+                        <label for="text"> <strong>LinkedIn:</strong></label> <br>
+                        <input id="linkedIn-F" type="text" name="text" placeholder="Enter Your LinkedIn ID">
+                        <br><br>
+
+
+                    </fieldset>
+
+                    <a href="#resume"><button id="submitBtn" class="submit">Submit</button></a>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-------------------------  resume   ------------------------------------------------------->
+    <div id="resume" class="hide-C">
+
+        <div class="body1">
+            <div class="container">
+                <div class="second-cont">
+                    <div class="third-cont">
+                        <div class="inner-one">
+                            <div class="col-md-4" id="image-C"> <img alt="image" id="image" ></div>
+                            <div class="col-md-8">
+
+                                <hr>
+                                <h1 id="name-C"></h1>
+                                <p id="p" class="profession-C"></p><br><br>
+
+
+                            </div>
+                        </div>
+
+                        <!-- ------------------- body section ---------------- -->
+                        <hr>
+                        <div class="inner-second">
+                            <h3>PROFESSIONAL SUMMARY</h3>
+                            <p id="summary-C"></p>
+
+                        </div>
+                        <hr>
+                        <div class="inner-second">
+                            <h3 id="P-E-C">PROJECT</h3><br>
+                            <h4 id="project-C"></h4>
+                            <p id="projectDet-C">
+
+                            </p><br>
+
+
+                            <h4 id="project2-C"></h4>
+                            <p id="projectDet2-C">
+
+                            </p><br>
+
+                            <h4></h4>
+                            <p>
+                            </p>
+                        </div>
+                        <hr>
+
+
+                        <!-- ------------------- Bottom section-------------------  -->
+
+
+                        <div class="Bottom">
+                            <div class="Skills">
+                                <h3>Skills</h3><br>
+
+
+                                <ul>
+                                    <li id="skill1-C"></li>
+                                    <li id="skill2-C"></li>
+                                    <!-- <li id="skill3-C"></li> -->
+
+
+
+                                </ul>
+
+
+
+                            </div>
+                            <div class="Education">
+                                <h3>Education</h3>
+                                <p>
+                                <h4 id="degree-C"></h4>
+                                <span id="institute-C"></span><br><br>
+
+                                <h4 id="degree2-C"></h4>
+                                <span id="institute2-C"></span><br>
+
+                                </p>
+                            </div>
+                            <div class="Contact">
+                                <h3>Contact</h3>
+                                <p><i class="fa-solid fa-phone" style="color: #340202;"></i><span id="phone-C"> </span></p>
+                                <p><i class="fa-solid fa-envelope" style="color: #340202;"></i><span id="email-C"> </span> </p>
+                                <p><i class="fa-brands fa-github" style="color: #340202;"></i><span id="github-C"> </span> </p>
+                                <p><i class="fa-brands fa-linkedin" style="color: #340202;"></i><span id="linkedIn-C"> </span> </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <a href="#form"><button id="submitBtn" class="submit Back">Edit</button></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
