@@ -1,1 +1,1 @@
-dynamic-resume-builder-ishraq.netlify.app
+https://dynamic-resume-builder-ishraq.netlify.app
