@@ -24,8 +24,9 @@ let skill2Form = document.querySelector("#skill2-F")
 let skill3Form = document.querySelector("#skill3-F")
 let btn = document.getElementById("new")
 
-const add = btn.addEventListener("click", () => {
+const add = btn.addEventListener("click", (e) => {
 
+    e.preventDefault()
     let new1 = document.createElement("input")
     new1.setAttribute("id", "skill2-F")
     new1.setAttribute("placeholder", "Enter here")
@@ -38,9 +39,12 @@ const add = btn.addEventListener("click", () => {
 
     })
     console.log(new1);
+   
     
 
 })
+
+// 
 
 
 
@@ -71,11 +75,60 @@ let headingP = document.querySelector("#P-E-C")
 
 const submitBtn = document.querySelector('#submitBtn').addEventListener('click', async (event) => {
 
-    // if (!nameForm.value || !titleForm.value || !summaryForm.value  || !projectNameForm.value || !projectDetForm.value || !projectName2Form.value || !projectDet2Form.value || !degreeForm.value || !instituteForm.value || !degree2Form.value || !institute2Form.value || !phoneForm.value || !emailForm.value || !githubForm.value|| !linkedInForm.value || !skill1Form.value || !skill2Form.value) {
-    //     alert('please fill all the requirments')
-    // }
 
-    // else{
+    // FORM VALIDATION 
+
+    // Create an array of all input fields
+    let inputs = [
+        nameForm,
+        titleForm,
+        summaryForm,
+        projectForm,
+        experienceForm,
+        projectNameForm,
+        projectDetForm,
+        projectName2Form,
+        projectDet2Form,
+        degreeForm,
+        instituteForm,
+        degree2Form,
+        institute2Form,
+        phoneForm,
+        emailForm,
+        githubForm,
+        linkedInForm,
+        skill1Form,
+        // skill2Form,
+        // skill3Form
+    ];
+    
+    // Check if any input is empty
+    let isValid = true;
+    inputs.forEach(input => {
+        if (input.value.trim() === "") {
+            isValid = false;
+            input.style.border = "2px solid red";
+            // console.log("not submit");
+            
+        } else {
+            input.style.border = "";
+            // console.log("submit");
+            
+        }
+    });
+    
+    
+    if (!isValid) {
+        alert("Please fill out all the fields.");
+    } else {
+        console.log("Form submitted successfully!");
+        form.classList.add("hide-F")
+        resume.classList.remove("hide-C")
+    }
+    
+
+
+      // ------------- IMAGE CONVERT FORM TO CV
     let imageForm = document.querySelector("#photoInput")
     console.log(imageForm);
     let imageCv = document.querySelector("#image")
@@ -116,9 +169,6 @@ const submitBtn = document.querySelector('#submitBtn').addEventListener('click',
     }
 
 
-
-    form.classList.add("hide-F")
-    resume.classList.remove("hide-C")
 
     nameCV.innerHTML = nameForm.value
     professionCv.innerHTML = titleForm.value
